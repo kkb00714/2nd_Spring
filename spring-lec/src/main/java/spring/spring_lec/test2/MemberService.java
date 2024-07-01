@@ -8,9 +8,15 @@ import java.util.List;
 import java.util.Optional;
 
 public class MemberService {
-    private final MemberRepository memberRepository = new MemoryMemberRepository();
+    // Ctrl + Shift + T => 테스트 자동화 생성
 
-    // 회원가입 -
+    private final MemberRepository memberRepository;
+    public MemberService(MemberRepository memberRepository ) {
+        this.memberRepository = memberRepository;
+    }
+
+
+    // 회원가입 - 자바 람다함수 복습해볼 것.
     public Long join(Member member) {
         // 같은 이름이 있는 중복 회원은 X
         Optional<Member> result = memberRepository.findByName(member.getName());
@@ -33,6 +39,9 @@ public class MemberService {
         return memberRepository.findById(memberId);
     }
 
-
+    // Prof+ 닉네임 조회하기 만들기
+    public Optional<Member> findNickname(String memberNickname) {
+        return memberRepository.findByNickname(memberNickname);
+    }
 
 }
