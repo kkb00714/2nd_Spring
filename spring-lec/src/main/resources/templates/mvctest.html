@@ -1,0 +1,12 @@
+<html xmlns:th="http://www.thymeleaf.org">
+    <body>
+        <p th:text="'hello ' + ${name}">hello! empty</p>
+
+        <p>1. 내장 톰캣 서버에서 요청을 받음</p>
+        <p>2. 컨트롤러에 매핑되어 있는 메서드를 호출</p>
+        <p>3. return을 받을 때 가져온 값을 viewResolver에 넘겨줌</p>
+        <p>4. view를 찾아서 템플릿 엔진을 연결해줌</p>
+        <p>5. 템플릿 엔진이 변환을 한 html을 웹 브라우저에 반환</p>
+
+    </body>
+</html>
