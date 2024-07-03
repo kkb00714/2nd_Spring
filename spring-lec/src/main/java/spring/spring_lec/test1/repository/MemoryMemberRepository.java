@@ -4,6 +4,7 @@ import spring.spring_lec.test1.Member;
 
 import java.util.*;
 
+// MemoryMemberRepository는 데이터 저장소에 직접 접근하며 데이터 저장 & 조회
 
 // MemberRepository (Interface)의 구현체
 public class MemoryMemberRepository implements MemberRepository {
