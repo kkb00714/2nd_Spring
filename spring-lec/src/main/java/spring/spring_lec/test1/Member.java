@@ -7,6 +7,8 @@ public class Member {
     private String password;
     private String nickname;
 
+    // get'값' => '값'을 반환하는 메서드
+    // set'값' => '값'을 설정하는 메서드
     public Long getId() {
         return id;
     }
