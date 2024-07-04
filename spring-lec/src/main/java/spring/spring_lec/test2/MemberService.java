@@ -17,14 +17,13 @@ import java.util.Optional;
 
 // => 클라이언트가 요청한 작업을 처리하고 필요한 데이터 작업을 위해 레포지토리 호출.
 // ※ 한마디로 서비스 계층은 비즈니스 로직을 캡슐화하고 데이터 접근 계층과 상호작용함.
-@Service
 public class MemberService {
     // Ctrl + Shift + T => 테스트 자동화 생성
 
     private final MemberRepository memberRepository;
 
     // (구조체) MemberService 클래스가 memberRepository 인터페이스를 주입받음.
-    @Autowired
+
     public MemberService(MemberRepository memberRepository ) {
         this.memberRepository = memberRepository;
     }
