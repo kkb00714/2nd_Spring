@@ -1,6 +1,6 @@
 package spring.spring_lec.test1.repository;
 
-import spring.spring_lec.test1.Member;
+import spring.spring_lec.test1.domain.Member;
 
 import java.util.List;
 import java.util.Optional;
@@ -10,6 +10,7 @@ import java.util.Optional;
 // => 이후 구현체를 변경해서 클라이언트 코드에 영향이 없음,
 // => 모의 객체를 사용하여 테스트하기가 쉬움,
 // =>  다양한 클래스가 동일한 메서드를 구현할 수 있음
+
 
 public interface MemberRepository {
     

@@ -1,10 +1,8 @@
 package spring.spring_lec.repository;
 
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
-import spring.spring_lec.test1.Member;
-import spring.spring_lec.test1.repository.MemberRepository;
+import spring.spring_lec.test1.domain.Member;
 import spring.spring_lec.test1.repository.MemoryMemberRepository;
 
 import java.util.List;

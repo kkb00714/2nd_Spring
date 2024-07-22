@@ -1,4 +1,4 @@
-package spring.spring_lec.test1;
+package spring.spring_lec.test1.domain;
 
 public class Member {
 

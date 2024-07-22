@@ -3,14 +3,35 @@ package spring.spring_lec.test1.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import spring.spring_lec.test2.MemberService;
+import org.springframework.web.bind.annotation.PostMapping;
+import spring.spring_lec.test1.domain.Member;
+import spring.spring_lec.test1.service.MemberService;
 
 @Controller
 public class MemberController {
+    private final MemberService memberService;
+    @Autowired
+    public MemberController(MemberService memberService) {
+        this.memberService = memberService;
+    }
+
     @GetMapping("/")
-    // 기존에 있던 정적인 / 루트는 무시됨
     public String home() {
         return "home";
     }
 
+    @GetMapping("/members/new")
+    public String createForm() {
+        return "members/createMemberForm";
+    }
+
+    @PostMapping("/members/new")
+    public String create(MemberForm form) {
+        Member member = new Member();
+        member.setName(form.getName());
+
+        memberService.join(member);
+
+        return "redirect:/";
+    }
 }

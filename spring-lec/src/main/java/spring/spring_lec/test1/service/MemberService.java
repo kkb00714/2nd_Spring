@@ -1,10 +1,8 @@
-package spring.spring_lec.test2;
+package spring.spring_lec.test1.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import spring.spring_lec.test1.Member;
+import spring.spring_lec.test1.domain.Member;
 import spring.spring_lec.test1.repository.MemberRepository;
-import spring.spring_lec.test1.repository.MemoryMemberRepository;
 
 import java.util.List;
 import java.util.Optional;
@@ -17,6 +15,8 @@ import java.util.Optional;
 
 // => 클라이언트가 요청한 작업을 처리하고 필요한 데이터 작업을 위해 레포지토리 호출.
 // ※ 한마디로 서비스 계층은 비즈니스 로직을 캡슐화하고 데이터 접근 계층과 상호작용함.
+
+@Service
 public class MemberService {
     // Ctrl + Shift + T => 테스트 자동화 생성
 
